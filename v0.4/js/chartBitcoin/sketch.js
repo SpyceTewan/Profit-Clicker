@@ -4,7 +4,7 @@ let detail;		//History size
 
 function setup(){
 	//Initiating canvas
-	var newCanvas = createCanvas(500, 300);
+	var newCanvas = createCanvas(650, 300);
 	newCanvas.parent("viewport_bitcoin_canvas");
 	
 	initAI(); //Initiating chartAI
@@ -13,9 +13,12 @@ function setup(){
 	//Setting variables
 	chart = 500;
 	history = [];
+
 	detail = 50;
 
-	
+	for(let i = 0; i < detail; i++) {
+		history[i] = chart;
+	}
 }
 
 function draw(){

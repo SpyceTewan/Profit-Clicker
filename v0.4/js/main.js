@@ -1,20 +1,22 @@
 let money;
 let moneyPerClick;
 let moneyPerClickPrice;
+let moneyPerClickProgress;
 let nachkommerStellen;
 let energy;
 let energyConsumption;
 let energyConsumptionPrice;
+let energyConsumptionProgress;
 let bitcoin;
 
 function initGame(){
 	nachkommerStellen = Math.pow(10, 2);
 	money = 0;
 	moneyPerClick = 0.1;
-	moneyPerClickPrice = 7;
+	moneyPerClickProgress = 0;
 	energy = 100;
 	energyConsumption = 1;
-	energyConsumptionPrice = 10;
+	energyConsumptionProgress = 0;
 	bitcoin = 0;
 
 	initBitcoin();
@@ -27,6 +29,11 @@ function initGame(){
 	}
 	console.log("Game started!");
 	console.log("ProfitClicker v0.3");
+}
+
+function acceptCookies() {
+	Cookies.set("accepted", "true");
+	$("#cookies-container").fadeOut(500);
 }
 
 function earnMoney(){

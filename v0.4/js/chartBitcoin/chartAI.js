@@ -20,10 +20,10 @@ function initAI(){
 	behaviorChangeRate = 20;
 	behaviorChangeRateChance = 70;
 
-	shakeAmount = 7;
+	shakeAmount = 10;
 	changeAmount = 3;
 	changeEveningChance = 0.7;
-	superAmount = 3;
+	superAmount = 10;
 
 	console.log("Started chartAI");
 }
@@ -77,12 +77,12 @@ function updateAI(){
 	}
 
 	if(chart > 1000){
-			chart = 1000;
-		}
+		chart = 1000;
+	}
 
-		if(chart < 0){
-			chart = 0;
-		}
+	if(chart < 0){
+		chart = 0;
+	}
 
 	behaviorR++;
 }

@@ -1,15 +1,17 @@
+let pricetable;
+
 function initPriceTables(){
-    let path = "./json/pricetables.json"
-    let file;
+    let xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            pricetable = JSON.parse(this.responseText);
 
-    $.getJSON(path, function(data){
-        console.log("Loading " + path);
-        file = data;
-    }).fail(function(){
-        console.log("Failed to load " + path + "!");
-    }).done(function(){
-        console.log(path + " Loaded!");
-    });
+            setMoneyPerClickPrice(pricetable.earnings[0]);
+            setEnergyConsumptionPrice(pricetable.consumption[0]);
+        }
+    };
+    xhttp.open("GET", "json/pricetables.json", true);
+    xhttp.send();
 
-    console.log(file);
+
 }

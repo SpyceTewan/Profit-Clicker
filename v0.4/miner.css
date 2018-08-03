@@ -12,7 +12,9 @@
 	width: 120px; 
 	background-color: #202020;
 	float: left;
-	margin-left: 5px;
+
+	position: absolute;
+	transform: translateX(-50%);
 }
 
 .miner_speed {

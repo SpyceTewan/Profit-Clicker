@@ -1,0 +1,150 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Montserrat', sans-serif;
+	outline: none;
+	/*border: dotted green 1px;*/
+}
+
+body {
+	background-color: #202020;
+}
+
+h1 {
+	margin-left: 20px;
+	margin-top: 10px;
+	float: left;
+}
+
+.header {
+	background-color: #dddddd;
+	margin-top: 20px;
+	margin-left: 20px;
+	padding: 5px;
+	height: 60px;
+	width: 1430px;
+	border: solid 3px #5460FD;
+}
+
+.container {
+	float: left;
+	background-color: #dddddd;
+	margin-top: 20px;
+	margin-left: 20px;
+	padding: 5px;
+	height: 600px;
+	width: 250px;
+	border: solid 3px #5460FD;
+}
+
+#mainbar {
+	text-align: center;
+}
+
+#casebar {
+	width: 550px;
+}
+
+#bitcoinbar {
+	width: 560px;
+	text-align: center;
+}
+
+button {
+	background-color: #5460FD;
+	border: none;
+	padding: 5px;
+	color: #ffffff;
+	width: 200px;
+	transition-duration: 0.5s;
+	border: 2px #0150D6 solid;
+	border-radius: 5px;
+}
+
+button:hover {
+	background-color: #0150D6;
+}
+
+.shop {
+	margin: 5px;
+}
+
+#viewport_money {
+	font-size: 120%;
+}
+
+#viewport_energy_bar {
+	margin-top: 5px;
+	margin-left: 10%;
+	appearance: none;
+	background-color: #ffffff;
+	width: 60%;
+	float: left;
+}
+
+#viewport_energy_text {
+	margin-top: 5px;
+	text-align: left;
+	padding-left: 5px;
+	width: 25%;
+	float: left;
+}
+
+#container_energy {
+	height: 50px;
+}
+
+#viewport_bitcoin_canvas {
+	width: 500px;
+	height: 300px;
+	margin-left: 25px;
+	background-color: #202020;
+	border: solid 3px #5460FD;
+}
+
+#container_bitcoin_info {
+	height: 20px;
+	width: 100%;
+	text-align: left;
+	margin-top: 10px;
+}
+
+#viewport_bitcoin {
+	float: left;
+	margin-left: 70px;
+}
+
+#viewport_bitcoin_value {
+	float: right;
+	margin-right: 70px;
+}
+
+#viewport_bitcoin_buy {
+	width: 100px;
+	background-color: #1ABE00;
+	border: 2px #16A000 solid;
+}
+
+#viewport_bitcoin_buy:hover {
+	background-color: #16A000;
+}
+
+#viewport_bitcoin_sell {
+	width: 100px;
+	background-color: #E60000;
+	border: 2px #C20000 solid;
+}
+
+#viewport_bitcoin_sell:hover {
+	background-color: #C20000;
+}
+
+.hint {
+	color: #6b6b6b;
+	text-align: right;
+	float: right;
+}
+
+.hint_container {
+	float: right;
+}

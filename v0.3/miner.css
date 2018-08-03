@@ -1,0 +1,22 @@
+.miner_button {
+	padding-left: 1px;
+	padding-right: 1px;
+	width: 100px;
+	margin-left: 2px;
+	margin-top: 5px;
+}
+
+.miner_container {
+	border: solid 3px #5460FD; 
+	height: 90px; 
+	width: 120px; 
+	background-color: #202020;
+	float: left;
+	margin-left: 5px;
+}
+
+.miner_speed {
+	color: white; 
+	font-size: 90%;
+	margin-top: 10px;
+}

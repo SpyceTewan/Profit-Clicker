@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Clicker</title>
+	<link rel="stylesheet" type="text/css" href="default.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+	<script src="js/main.js"></script>
+	<script src="js/auto.js"></script>
+	<script src="js/bitcoin.js"></script>
+	<script src="js/viewport_updater.js"></script>
+	<script src="js/upgrades.js"></script>
+	<script src="js/chartBitcoin/sketch.js"></script>
+	<script src="js/progress_manager.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
+</head>
+<body onload="initGame()" onunload="saveProgress()">
+	<div class="header">
+		<h1>Profit Clicker!</h1>
+		<div class="hint_container">
+			<p class="hint">v0.2</p><br><a href="../changelog.html" class="hint"><b>Changelog</b></a><br>
+			<p class="hint">We use cookies to store your game progress!</p>
+		</div>
+	</div>
+
+	<div class="container" id="mainbar">
+			<p id="viewport_money">0$</p>
+			<button id="btn_earn" class="shop" onClick="earnMoney()">Earn 0.1$ for 1 Energy</button>
+			<button id="btn_upgradeMpC" class="shop" onClick="upgradeMoneyPerClick()">Upgrade earnings <br>[7$]</button>
+			<button id="btn_upgradeEC" class="shop" onClick="upgradeEnergyConsumption()">Decease Energy Consumption <br>[10$]</button>
+
+
+			
+			<div id="container_energy">
+				<p style="font-size: 120%">Energy</p>
+				<progress value="100" max="100" id="viewport_energy_bar"></progress>
+				<p id="viewport_energy_text">100%</p>
+			</div>
+			
+	</div>
+
+	<div class="container" id="casebar">
+		Gambling will be here soon! ;)
+
+	</div>
+
+	<div class="container" id="bitcoinbar">
+		
+		<p style="font-size: 120%">Bitcoin</p>
+		<div id="viewport_bitcoin_canvas"></div>
+
+		
+		<div id="container_bitcoin_info">
+			<p id="viewport_bitcoin">Your Wallet: 0 B</p>
+			<p id="viewport_bitcoin_value">1B = ?</p>
+		</div>
+		
+
+		<div style="overflow: auto">
+			<div style="float: left; margin-left: 70px; margin-top: 20px; text-align: left">
+				<input type="number" id="viewport_bitcoin_transaction_input" onchange=	"updateBitcoinTransaction()">
+				<p id="viewport_bitcoin_transaction_view">0 $</p>
+			</div>
+			<div style="float: right; margin-right: 70px; margin-top: 20px">
+				<button id="viewport_bitcoin_buy" onclick="bitcoinBuy()">Buy</button>
+				<button id="viewport_bitcoin_sell" onclick="bitcoinSell()">Sell</button>
+			</div>
+
+		</div>
+		
+		<div style="height: 2px; width: 510px; background-color: #5460FD; margin-left: 25px; margin-top: 5px"></div>
+		
+
+		<p id="miner_speed_total">Total Mining Speed: 0 Hash/s</p>
+		<div>
+			<div style="float: left; margin-left: 70px; margin-top: 20px; text-align: left">
+				<p id="miner_count">Miner Count: 0</p>
+				<p id="miner_speed">Miner Speed: 1 Hash/s</p>
+			</div>
+
+			<div style="float: right; margin-right: 70px; margin-top: 20px; text-align: right; width: 200px">
+				<button class="miner_shop" onclick="minersBuy()" id="miner_buy">Buy miner <br> [40$]</button>
+				<button class="miner_shop" onclick="minersUpgrade()" id="miner_upgrade">Upgrade all Miners <br> [40$]</button>
+			</div>
+		</div>
+
+	</div>
+
+</body>
+</html>

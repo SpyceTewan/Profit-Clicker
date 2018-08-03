@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Clicker</title>
+	<link rel="stylesheet" type="text/css" href="default.css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+	<script src="js/main.js"></script>
+	<script src="js/auto.js"></script>
+	<script src="js/bitcoin.js"></script>
+	<script src="js/viewport_updater.js"></script>
+	<script src="js/chartBitcoin/sketch.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.14/p5.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+</head>
+<body onload="initGame()">
+	<div class="header">
+		<h1>Profit Clicker!</h1>
+		<div class="hint_container">
+			<p class="hint">v0.1</p><br><a href="../changelog.html" class="hint"><b>Changelog</b></a><br>
+			<p class="hint"></p>
+		</div>
+	</div>
+
+	<div class="container" id="mainbar">
+			<p id="viewport_money">0$</p>
+			<button id="btn_earn" class="shop" onClick="earnMoney()">Earn 0.1$</button>
+			<button id="btn_upgradeMpC" class="shop" onClick="upgradeMoneyPerClick()">Upgrade earnings <br>[7$]</button>
+
+			
+			<div id="container_energy">
+				<p style="font-size: 120%">Energy</p>
+				<progress value="100" max="100" id="viewport_energy_bar"></progress>
+				<p id="viewport_energy_text">100%</p>
+			</div>
+			
+	</div>
+
+	<div class="container" id="casebar">
+		Gambling will be here soon! ;)
+
+	</div>
+
+	<div class="container" id="bitcoinbar">
+		
+		<p style="font-size: 120%">Bitcoin</p>
+		<div id="viewport_bitcoin_canvas"></div>
+
+		
+		<div id="container_bitcoin_info">
+			<p id="viewport_bitcoin">Your Wallet: 0 B</p>
+			<p id="viewport_bitcoin_value">1B = ?</p>
+		</div>
+		
+
+		<div style="height: 30%">
+			<div style="float: left; margin-left: 70px; margin-top: 20px; text-align: left">
+				<input type="number" id="viewport_bitcoin_transaction_input" onchange=	"updateBitcoinTransaction()">
+				<p id="viewport_bitcoin_transaction_view">0 $</p>
+			</div>
+			<div style="float: right; margin-right: 70px; margin-top: 20px">
+				<button id="viewport_bitcoin_buy" onclick="bitcoinBuy()">Buy</button>
+				<button id="viewport_bitcoin_sell" onclick="bitcoinSell()">Sell</button>
+			</div>
+		</div>
+
+	</div>
+
+</body>
+</html>

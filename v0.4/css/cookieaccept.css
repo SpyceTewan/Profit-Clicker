@@ -1,0 +1,44 @@
+#cookies-container {
+	text-align: center;
+
+
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(20, 20, 20, 0.9);
+
+	position: fixed;
+	left: 0;
+	right: 0;
+}
+
+.cookies-box {
+	background-color: rgb(10, 10, 10);
+	width: 500px;
+	height: 200px;
+
+	-webkit-box-shadow: 0px 0px 15px 0px rgba(12,12,12,1);
+-moz-box-shadow: 0px 0px 15px 0px rgba(12,12,12,1);
+box-shadow: 0px 0px 15px 0px rgba(12,12,12,1);
+
+	position: relative;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+
+	padding: 40px;
+
+
+}
+
+.cookies-box p {
+	color: white;
+}
+
+.cookies-box button {
+	position: absolute;
+	bottom: 20%;
+	left: 50%;
+
+	transform: translateX(-50%);
+}

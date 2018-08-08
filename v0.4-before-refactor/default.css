@@ -1,3 +1,8 @@
+@font-face { 
+	font-family: "Montserrat"; 
+	src: url("assets/Montserrat/Montserrat/Montserrat-Regular.ttf"); 
+}
+
 * {
 	margin: 0px;
 	padding: 0px;
@@ -29,8 +34,7 @@ h1 {
 	background-color: #dddddd;
 	width: 100%;
 	height: 10%;
-	outline: solid 3px #5460FD;
-	outline-offset: -2px;
+	box-shadow: 0px 0px 0px 3px #5460FD;
 }
 
 .tabs {
@@ -45,8 +49,7 @@ h1 {
 	background-color: #dddddd;
 	height: 100%;
 	width: 22.5%;
-	outline: solid 3px #5460FD;
-	outline-offset: -2px;
+	box-shadow: 0px 0px 0px 3px #5460FD;
 }
 
 #mainbar {
@@ -74,10 +77,12 @@ button {
 	border: 2px #0150D6 solid;
 	border-radius: 5px;
 	cursor: pointer;
+	box-shadow: 0px 10px 30px 0px rgba(25, 25, 25, 0.25);
 }
 
 button:hover {
 	background-color: #0150D6;
+	box-shadow: 0px 10px 30px 0px rgba(25, 25, 25, 0.5);
 }
 
 .shop {
@@ -129,17 +134,28 @@ button:hover {
 
 #container_bitcoin_transaction {
 	width: 100%;
-	overflow: auto;
-}
-
-#container_bitcoin_transaction_input {
-	float: left;
-	margin-left: 5%;
+	height: 10%;
+	position: relative;
 }
 
 #container_bitcoin_transaction_buttons {
-	float: right;
-	margin-right: 5%;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.container_bitcoin_transaction_box {
+	visibility: hidden;
+	position: absolute;
+	bottom: 40px;
+	left: 0px;
+	z-index: 1;
+	height: 200px;
+	width: 300px;
+	background-color: #dddddd;
+	box-shadow: 0px 0px 10px 5px rgba(20, 20, 20, 0.1);
+	border-radius: 2px;
 }
 
 #container_bitcoin_miner {
@@ -162,6 +178,7 @@ button:hover {
 	width: 100px;
 	background-color: #1ABE00;
 	border: 2px #16A000 solid;
+	margin-right: 10px;
 }
 
 #viewport_bitcoin_buy:hover {
@@ -172,6 +189,7 @@ button:hover {
 	width: 100px;
 	background-color: #E60000;
 	border: 2px #C20000 solid;
+	margin-left: 10px;
 }
 
 #viewport_bitcoin_sell:hover {
